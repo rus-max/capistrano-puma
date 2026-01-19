@@ -179,6 +179,7 @@ Configurable options, shown here with defaults: Please note the configuration op
     set :puma_systemd_watchdog_sec, 10  # Set to 0 or false to disable watchdog
     set :puma_service_unit_env_files, []
     set :puma_service_unit_env_vars, []
+    set :puma_service_unit_props, [] # Set extral puma service properties, such as ["MemoryMax=2G","TimeoutAbortSec=30"]
 ```
 
 __Notes:__ If you are setting values for variables that might be used by other plugins, use `append` instead of `set`. For example:
